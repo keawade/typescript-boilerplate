@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "type": "module",
+  "author": "keawade",
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "start": "node --experimental-strip-types src/main.ts",
+    "start:dev": "node --experimental-strip-types --env-file=.env --watch src/main.ts",
+    "test": "node --experimental-strip-types --env-file=.env.test --test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "pino": "^9.6.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.1",
+    "pino-pretty": "^13.0.0",
+    "typescript": "^5.8.0-beta"
+  }
+}

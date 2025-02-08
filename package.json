@@ -13,7 +13,8 @@
     "test": "node --experimental-strip-types --env-file=.env.test --test",
     "test:watch": "npm run test -- --watch",
     "format": "prettier . --write --list-different",
-    "format:check": "prettier . --list-different"
+    "format:check": "prettier . --list-different",
+    "lint": "eslint ."
   },
   "dependencies": {
     "fastify": "^5.2.1",
@@ -21,10 +22,16 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.20.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.1",
+    "eslint": "^9.20.0",
     "pino-pretty": "^13.0.0",
     "prettier": "^3.4.2",
-    "typescript": "^5.8.0-beta"
+    "typescript": "^5.8.0-beta",
+    "typescript-eslint": "^8.23.0"
+  },
+  "overrides": {
+    "typescript": "$typescript"
   }
 }

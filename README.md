@@ -16,9 +16,12 @@ enticing.
 - [Zod][zod] env validation
 
 [fastify]: https://fastify.dev/
-[node-strip-types]: https://nodejs.org/docs/latest-v22.x/api/all.html#all_cli_--experimental-strip-types
+[node-strip-types]:
+  https://nodejs.org/docs/latest-v22.x/api/all.html#all_cli_--experimental-strip-types
 [node-test]: https://nodejs.org/docs/latest-v22.x/api/test.html
-[node-env-file]: https://nodejs.org/docs/latest-v22.x/api/all.html#all_cli_--env-fileconfig
+[node-env-file]:
+  https://nodejs.org/docs/latest-v22.x/api/all.html#all_cli_--env-fileconfig
 [node-watch]: https://nodejs.org/docs/latest-v22.x/api/all.html#all_cli_--watch
-[ts-erasable-syntax-only]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/#the---erasablesyntaxonly-option
+[ts-erasable-syntax-only]:
+  https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/#the---erasablesyntaxonly-option
 [zod]: https://zod.dev/

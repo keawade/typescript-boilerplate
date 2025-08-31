@@ -8,9 +8,9 @@
   "license": "MIT",
   "description": "",
   "scripts": {
-    "start": "node --experimental-strip-types src/main.ts",
-    "start:dev": "node --experimental-strip-types --env-file=.env --watch src/main.ts",
-    "test": "node --experimental-strip-types --env-file=.env.test --test",
+    "start": "node src/main.ts",
+    "start:dev": "node --env-file=.env --watch src/main.ts",
+    "test": "node --env-file=.env.test --test",
     "test:watch": "npm run test -- --watch",
     "format": "prettier . --write --list-different",
     "format:check": "prettier . --list-different",

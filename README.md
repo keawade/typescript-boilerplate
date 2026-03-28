@@ -1,7 +1,7 @@
 # Node + TypeScript boilerplate
 
 This boilerplate repo pulls together a demo of what I consider to be some of the
-current best practices for Node + Typescript development.
+current best practices for generic Node + Typescript development.
 
 ## Highlights
 

@@ -1,17 +1,15 @@
-import { describe, it } from "node:test";
-import { default as assert } from "node:assert";
+import { describe, it, expect } from "vitest";
 import { createApp } from "../src/app.ts";
 
 describe("createApp", () => {
   it("should return a Fastify instance", async () => {
     const actual = createApp();
 
-    assert.equal(
+    expect(
       actual.hasRoute({
         method: "get",
         url: "/",
       }),
-      true,
-    );
+    ).toBe(true);
   });
 });

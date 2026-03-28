@@ -6,6 +6,11 @@ info:
 http:
   method: GET
   url: "{{base_url}}/howdy"
+  params:
+    - name: name
+      value: Bob
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

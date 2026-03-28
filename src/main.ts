@@ -4,14 +4,12 @@ import { createApp } from "./app.ts";
 const app = createApp();
 
 const closeGracefully = async (signal: NodeJS.Signals) => {
-  app.log.info(`Received signal to terminate: ${signal}`);
+  app.log.info({ signal }, "Received signal to close");
 
   await app.close();
 
-  // await other things we should cleanup nicely
-  process.kill(process.pid, signal);
+  app.log.info("Fastify app has been closed");
 };
-process.once("SIGINT", closeGracefully);
 process.once("SIGTERM", closeGracefully);
 
 await app.listen({ host: "0.0.0.0", port: env.PORT });

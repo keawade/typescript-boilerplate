@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node src/main.ts",
     "start:dev": "dotenv -- node --watch src/main.ts",
-    "test": "dotenv -e .env.test -- vitest",
+    "test": "vitest",
     "format": "prettier . --write --list-different",
     "format:check": "prettier . --check",
     "typecheck": "tsc --noEmit",

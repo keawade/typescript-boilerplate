@@ -7,8 +7,7 @@ const createLoggerOptions = (
   switch (nodeEnvironment) {
     case "development":
       return {
-        enabled: true,
-        level: "debug",
+        level: process.env.LOG_LEVEL ?? "info",
         transport: {
           target: "pino-pretty",
           options: {
@@ -18,16 +17,10 @@ const createLoggerOptions = (
         },
       };
 
-    case "test":
-      return {
-        enabled: false,
-      };
-
     case "production":
     default:
       return {
-        enabled: true,
-        level: "info",
+        level: process.env.LOG_LEVEL ?? "info",
       };
   }
 };

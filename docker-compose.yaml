@@ -2,8 +2,8 @@ services:
   app:
     build: .
     ports:
-      - "$PORT:3000"
-    env_file: .env
+      - 3000:3000
     environment:
       NODE_ENV: production
-      SOME_SECRET: howdy
+      PORT: 3000
+      LOG_LEVEL: info

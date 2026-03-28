@@ -1,13 +1,15 @@
 import { z } from "zod";
 import { logger } from "./logger.ts";
 
+export const defaultLogLevel = "info" as const;
+
 const envSchema = z.object({
-  NODE_ENV: z.enum(["production", "development", "test"]),
-  PORT: z.coerce.number().default(3000),
+  NODE_ENV: z.enum(["production", "development"]),
+  PORT: z.coerce.number().int().default(3000),
 
   LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
-    .default("info"),
+    .default(defaultLogLevel),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);

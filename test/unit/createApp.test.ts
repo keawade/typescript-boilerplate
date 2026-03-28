@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createApp } from "../src/app.ts";
+import { createApp } from "../../src/app.ts";
 
 describe("createApp", () => {
   it("should return a Fastify instance", async () => {
@@ -8,7 +8,7 @@ describe("createApp", () => {
     expect(
       actual.hasRoute({
         method: "get",
-        url: "/",
+        url: "/health",
       }),
     ).toBe(true);
   });

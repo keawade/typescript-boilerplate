@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/main.ts",
     "start:dev": "nodemon",
-    "test": "vitest",
+    "test:unit": "vitest --project unit",
+    "test:integration": "vitest --project integration",
     "format": "prettier . --write --list-different",
     "format:check": "prettier . --check",
     "typecheck": "tsc --noEmit",

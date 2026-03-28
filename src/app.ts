@@ -8,8 +8,16 @@ export const createApp = () => {
     return reply.send({ status: "ok" });
   });
 
-  app.get("/howdy", (_req, reply) => {
-    return reply.send({ message: "Howdy, world!" });
+  app.get("/howdy", async (req, reply) => {
+    const name =
+      // TODO: Consider alternatives.
+      //
+      // Always going to be a string so not much point burning cycles just
+      // validating "is string" but I do need to type narrow but I really don't
+      // like casting, much less on every access.
+      (req.query as Record<string, string | undefined>).name ?? "world";
+
+    return reply.send({ message: `Howdy, ${name}!` });
   });
 
   return app;

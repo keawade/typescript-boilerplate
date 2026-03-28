@@ -10,6 +10,8 @@ current best practices for Node + Typescript development.
   - [TypeScript `--erasableSyntaxOnly`][ts-erasable-syntax-only]
 - Containerized build
 - Testing with [`vitest`][vitest]
+  - Unit tests
+  - Integration tests run against containerized build
 - [Zod][zod] env validation
 
 [node-strip-types]:

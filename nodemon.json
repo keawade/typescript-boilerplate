@@ -1,0 +1,6 @@
+{
+  "$schema": "https://www.schemastore.org/nodemon.json",
+  "watch": ["src", ".env"],
+  "exec": "node --env-file=.env src/main.ts",
+  "ext": "js,json,ts,env"
+}

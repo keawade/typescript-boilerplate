@@ -2,7 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig.json",
   "extends": "@tsconfig/node24/tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "node16",
+    "noEmit": true,
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
     "verbatimModuleSyntax": true,

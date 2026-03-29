@@ -7,6 +7,8 @@ const createLoggerOptions = (
   switch (nodeEnvironment) {
     case "development":
       return {
+        // This is validated in the env validation but is used directly here
+        // because to pull from env.ts would create a circular dependency.
         level: process.env.LOG_LEVEL ?? "info",
         transport: {
           target: "pino-pretty",

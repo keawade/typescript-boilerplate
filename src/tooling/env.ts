@@ -8,6 +8,13 @@ const envSchema = z.object({
   LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
     .default("info"),
+
+  OTEL_COLLECTOR_URL: z
+    .url({
+      protocol: /^https?$/,
+      normalize: true,
+    })
+    .default("http://jaeger:4318"),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);

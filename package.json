@@ -8,8 +8,7 @@
   "license": "MIT",
   "description": "",
   "scripts": {
-    "start": "node src/main.ts",
-    "start:dev": "nodemon",
+    "dev": "nodemon",
     "test:unit": "vitest --project unit",
     "test:integration": "vitest --project integration",
     "format": "prettier . --write --list-different",
@@ -18,7 +17,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@fastify/type-provider-json-schema-to-ts": "^5.0.0",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.72.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.214.0",
+    "@opentelemetry/resources": "^2.6.1",
+    "@opentelemetry/sdk-metrics": "^2.6.1",
+    "@opentelemetry/sdk-node": "^0.214.0",
+    "@opentelemetry/sdk-trace-node": "^2.6.1",
+    "@opentelemetry/semantic-conventions": "^1.40.0",
     "fastify": "^5.8.4",
     "pino": "^10.3.1",
     "zod": "^4.3.6"

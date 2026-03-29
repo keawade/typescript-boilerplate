@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   app:
     build: .
@@ -7,3 +9,16 @@ services:
       NODE_ENV: production
       PORT: 3000
       LOG_LEVEL: info
+    depends_on:
+      - jaeger
+
+  jaeger:
+    image: cr.jaegertracing.io/jaegertracing/jaeger:latest
+    volumes:
+      - ./collector-config.yaml:/jaeger/config.yaml
+    ports:
+      - "16686:16686" # UI
+      - "4317:4317"
+      - "4318:4318"
+      - "5778:5778"
+      - "9411:9411"

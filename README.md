@@ -45,6 +45,8 @@ podman compose down
 
 ## Notes
 
+- Type stripping is such a nice approach to TypeScript use. No more fiddling
+  with sourcemaps or compiler build steps. Just `npm ci` and `node src/main.ts`.
 - I was initially using `node --watch` for the `dev` script but I've gone back
   to `nodemon` because I kept running into an issue where `node --watch` would
   restart once or twice and then never trigger a restart again. Not sure what's
